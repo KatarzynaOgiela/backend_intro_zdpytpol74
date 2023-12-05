@@ -22,10 +22,23 @@ def template_view(request):
         'banana',
         'cherry'
     ]
+    user = {
+        'name': "John",
+        'surname': "DOE",
+        'age': 10
+    }
+
+    class Cow:
+        def __init__(self, name):
+            self.name = name
+
+    cow = Cow("Mucia")
     return render(
         request,
         'template.html',
         {
-            'fruits': fruits
+            'fruits': fruits,
+            'user': user,
+            'cow': cow
         }
     )
