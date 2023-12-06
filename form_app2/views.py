@@ -1,4 +1,4 @@
-# formularz metoda GET
+# formularz metoda post
 from django.shortcuts import render
 
 TASKS = []
