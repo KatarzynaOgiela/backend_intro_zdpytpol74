@@ -47,3 +47,17 @@ def task_detail_view(request, task_id):
             'task': task
         }
     )
+
+def task_update_view(request, task_id):
+    if task_id > len(TASKS):
+        raise Http404()
+
+    task = TASKS[task_id - 1]
+    return render(
+        request,
+        'form_app4/task_update.html',
+        {
+            'task_id': task_id,
+            'task': task
+        }
+    )
