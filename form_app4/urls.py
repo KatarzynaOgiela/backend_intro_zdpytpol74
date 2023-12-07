@@ -1,5 +1,5 @@
 from django.urls import path
-from form_app4.views import views
+from form_app4 import views
 
 app_name = 'form_app4'
 
@@ -15,5 +15,7 @@ urlpatterns = [
     path('tasks/<int:task_id>/', views.task_detail_view, name='task_detail'),
 
     # U
-    path('tasks/<int:task_id>/update', views.task_update_view, name='task_update')
+    path('tasks/<int:task_id>/update', views.task_update_view, name='task_update'),
+    # D
+    path('tasks/<int:task_id>/delete', views.task_delete_view, name='task_delete')
 ]
